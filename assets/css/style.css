@@ -12,7 +12,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: auto;
     width: 960px;
-    border-bottom: solid;
+   
   
 
     
@@ -56,6 +56,7 @@ nav{
     margin: auto;
     width: 500px;
     font-weight: bold;
+    
    
    
     
@@ -71,7 +72,7 @@ article{
 }
 body{
     background-image: url(../beanstalk.png);
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
    
     
 }
@@ -79,15 +80,20 @@ h1{
     border-style: solid;
     border-color:#777777;
     margin: auto;
-    padding: 10px;
-    border-top: white;
-    border-right: white;
-    border-left: white;
+    border-right: none;
+    border-left: none;
+    color: #4aaaa5;
+    border-top: none;
+    border-bottom: solid #777777 1px;
+    width: 960px;
+    background-color: white;
+    
 }
 #profilepic{
     margin: 4px 10px 0px 0px;
     border: 1px;
     padding: 10px;
+    padding-top: 0;
     float: left;
 }
 footer {
@@ -231,72 +237,206 @@ display: flex;
 justify-content: center;
 border: 2px;
 } 
+ @media screen and (max-width: 980px) {
+    #name{
+        width: 400px;
+        display: inline-block;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
 
-  @media screen and (max-width: 768px) {
-    body {
-   
+    nav{
+        text-align: center;
+        width: 400px;
+        display: inline-block;
+        float: none;
+        margin: auto;
+        border: 0px;
+ /* Can't make nav length any shorter with out the nav links going to another line        */
+        
     }
-  
-    .wrapper {
-      /* Box-model */
-      width: 100%;
-      padding: 20px;
+
+.head{
+    width: 900px;
+
+}
+body{
+
+    width: 800px;
+    
+
+}
+
+article{
+    width: 800px;
+}
+
+h1{
+    width: 800px;
+}
+footer{
+    height: 10%;
+}
+form{
+    height: 20%;
+}
+
+.piccontainer{
+    
+
+}
+#pics{
+    width: 50px;
+    display: block;
+
+
+};
+
+/* Having an issue with my media queries. I can only access each one separately  when they are listed at the top. comment out decending media query to access their features */
+
+@media screen and (max-width: 768px) {
+
+    #name{
+       width: 300px;
+       display: inline-block;
+       float: none;
+       margin: auto;
+       text-align: center;
+       
+      
+   }
+ 
+     nav{
+         text-align: center;
+         width: 300px;
+         display: inline-block;
+         float: none;
+         margin: auto;
+        
+        
+         
+     }
+     body{
+        width: 700px;
+
+     }
+
+article{
+
+    width: 700px;
+
+}
+       
+      
+     
+     p {
+       width: 600px;
+       display: inline-block;
+       float: none;
+       margin: auto;
+       
+     }
+
+    footer{
+    height: 10%;
+
     }
-  
-    #main-content,
-    #sidebar {
-      width: 100%;
+
+    h1 {
+        width: 700px;
     }
+
+
+       };
+        
+      
+
   
-    #sidebar {
-      margin-top: 40px;
+  
+ 
+@media screen and (max-width: 640px) {
+/* I was not able to get the contact, portfolio and about nav bar options to go to another line because they are nested in too many elements */
+/* I was not able to create space between the footer and the body    */
+/* This screen length looks prettiy bad for the portfolio. Was unable to optimize with how the HTML is currently built.  */
+    #name {
+      width: 550px;
+      display: inline-block;
+      float: none;
+      margin: auto;
+      text-align: center;
+     
     }
-  }
-  
-  /* Additional Screen Sizes */
-  
-  /* Width at 320px and below */
-  @media screen and (max-width: 320px) {
-    body {
+
+    nav{
+        width: 550px;
+        float: none;
+        display: inline-block; 
+        margin: auto;
+        text-align: center;
+        position:static
+        
+    }
+
+    h1{
+        width: 550px;
+        display: inline-block;
+        float: none;
+        margin: auto;
+        text-align: center;
+
+      
+    }
+    #profilepic{
+        width: 400px;
+        height: 400px;
     
     }
-  
-    .wrapper {
-      /* Box-model */
-      width: 100%;
-      padding: 20px;
+    .bio{
+        display: inline-block;
+        float: none;
+        margin: auto;
+        text-align: center;
+        width: 600px;
+       
+        
+
     }
-  
-    #main-content,
-    #sidebar {
-      width: 100%;
+    footer{
+        position: unset;
+       
+        
+        
+        
+
+        
     }
-  
-    #sidebar {
-      margin-top: 40px;
+    body{
+        width: 550px;
+        float: none;
+        
+
+      
+        
+        
     }
-  }
-  
-  /* Width at 168px and below */
-  @media screen and (max-width: 168px) {
-    body {
+    article{
+        width: 550px;
+        margin:auto
+        
+    }
+    p{
+        width: 420px;
+        margin: auto;
+    }
+    input{
+        display: inline-block;
+        float: none;
+
+    }
+
+    form{
+        padding-bottom: 20px
     
     }
-  
-    .wrapper {
-      /* Box-model */
-      width: 100%;
-      padding: 20px;
-    }
-  
-    #main-content,
-    #sidebar {
-      width: 100%;
-    }
-  
-    #sidebar {
-      margin-top: 40px;
-    }
-  }  
-  
-
+};
